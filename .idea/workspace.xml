@@ -42,11 +42,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Task7.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Task7.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Task7.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="76">
-              <caret line="28" column="56" selection-start-line="28" selection-start-column="56" selection-end-line="28" selection-end-column="56" />
+            <state relative-caret-position="238">
+              <caret line="26" column="58" selection-start-line="26" selection-start-column="8" selection-end-line="26" selection-end-column="64" />
+              <folding>
+                <element signature="e#43#56#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Task8.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Task8.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="229">
+              <caret line="19" column="27" selection-start-line="19" selection-start-column="27" selection-end-line="19" selection-end-column="27" />
               <folding>
                 <element signature="e#43#56#0" expanded="true" />
               </folding>
@@ -72,6 +84,7 @@
         <option value="$PROJECT_DIR$/simple_test.py" />
         <option value="$PROJECT_DIR$/login.py" />
         <option value="$PROJECT_DIR$/Task7.py" />
+        <option value="$PROJECT_DIR$/Task8.py" />
       </list>
     </option>
   </component>
@@ -371,8 +384,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Task7.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="28" column="56" selection-start-line="28" selection-start-column="56" selection-end-line="28" selection-end-column="56" />
+        <state relative-caret-position="238">
+          <caret line="26" column="58" selection-start-line="26" selection-start-column="8" selection-end-line="26" selection-end-column="64" />
+          <folding>
+            <element signature="e#43#56#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Task8.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="229">
+          <caret line="19" column="27" selection-start-line="19" selection-start-column="27" selection-end-line="19" selection-end-column="27" />
           <folding>
             <element signature="e#43#56#0" expanded="true" />
           </folding>
