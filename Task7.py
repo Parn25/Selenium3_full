@@ -27,7 +27,6 @@ def test(start):
         for li_web in [ str(li_num) for li_num in range(1,l+1)]:
             link_st='//*[@id="box-apps-menu"]/li['+li_web+']'
             start.find_element_by_xpath(link_st).click()
-            time.sleep(2)
             """Проверям заголовок у родительского пункта меню"""
             try:
                 start.find_element_by_xpath('//*[@id="content"]/h1/span')
@@ -49,7 +48,7 @@ def test(start):
                         start.find_element_by_xpath('//*[@id="content"]/h1/span')
                     except NoSuchElementException:
                         start.quit()
-                    time.sleep(2)
+
 
 
 
