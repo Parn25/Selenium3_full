@@ -4,7 +4,7 @@ from selenium import webdriver
 
 @pytest.fixture
 def start(request):
-    driver = webdriver.Chrome()
+    driver = webdriver.Firefox(firefox_binary="c:\\Program Files\\Nightly\\firefox.exe")
     request.addfinalizer(driver.quit)
     return driver
 def test(start):
