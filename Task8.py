@@ -14,13 +14,14 @@ def start(request):
     return driver
 def test(start):
         start.get('http://localhost/litecart/en/')
-        most_all=start.find_elements_by_css_selector('#box-most-popular li')
-        sticker_most=start.find_elements_by_css_selector("#box-most-popular div.sticker")
-        l = 0
-        for el in most_all:
-            l += 1
-        for li_web in [str(li_num) for li_num in range(1, l + 1)]:
-            try:
-                st=start.find_element_by_xpath('//*[@id="box-most-popular"]/div/ul/li['+li_web+']/a[1]/div[1]/div').get_attribute('class')
-            except NoSuchElementException:
-                start.quit()
+        most_product = start.find_elements_by_css_selector('#box-most-popular li.product') #Находми все товары в этой секции
+        most_sticker = start.find_elements_by_css_selector('#box-most-popular div.sticker') #Находми все стикеры в этой секции
+        assert len(most_product) == len(most_sticker) #Если число товаров и стикеров  не совпадает возбуждаем исключение
+        #Проверяем секцию Campaigns
+        cam_product = start.find_elements_by_css_selector('#box-campaigns li.product')
+        cam_sticker= start.find_elements_by_css_selector('#box-campaigns div.sticker')
+        assert len(cam_product) == len(cam_sticker)
+        #Проверяем секцию Latest Products
+        last_product = start.find_elements_by_css_selector('#box-latest-products li.product')
+        last_sticker = start.find_elements_by_css_selector('#box-latest-products div.sticker')
+        assert len(last_product) == len(last_sticker)
