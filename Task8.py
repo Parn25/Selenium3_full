@@ -16,6 +16,5 @@ def test(start):
         start.get('http://localhost/litecart/en/')
         product = start.find_elements_by_css_selector('li.product')#Находми все товары
         for i in product: #Итерируемся по все товарам и проверяем у каждого товара наличие по одному стикеру
-            time.sleep(5)
             sticker=i.find_elements_by_css_selector('div.sticker')
             assert len(sticker) == 1
