@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="20bd4f01-a4db-4015-8aba-dd3f1f57cdc8" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Task13.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/Selenium3_full.iml" afterPath="$PROJECT_DIR$/.idea/Selenium3_full.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/simple_test.py" afterPath="$PROJECT_DIR$/simple_test.py" />
     </list>
     <ignored path="Selenium3_full.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -408,6 +404,14 @@
       <option name="presentableId" value="Default" />
       <updated>1479224601152</updated>
     </task>
+    <task id="LOCAL-00001" summary="Задание 13">
+      <created>1480862501184</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1480862501184</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -443,6 +447,10 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Задание 13" />
+    <option name="LAST_COMMIT_MESSAGE" value="Задание 13" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
