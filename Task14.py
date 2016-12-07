@@ -35,4 +35,4 @@ def test(start):
         start.switch_to.window(new_win_hn[0])#  Переключаемся на новое открытое окно
         WebDriverWait(start,10).until(EC.visibility_of_element_located((By.CSS_SELECTOR,'body')))#Дожидаемся пока откроется содержимое страницы
         start.close()#Закрываем новое окно
-        start.switch_to.window(mn_win)# Переключаемся на стартовое
+        start.switch_to.window(mn_win)# Переключаемся на стартовую страницу
