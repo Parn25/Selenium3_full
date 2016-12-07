@@ -24,14 +24,17 @@ for lk in all_link:
     mn_win = driver.current_window_handle
     all_old_win = driver.window_handles
     lk.click()
-    all_win = driver.window_handles
-    new_win_hn=list(set(all_win) - set(all_old_win))
+    new_win_hn=[]
+    while ( new_win_hn == [] ):
+        all_win = driver.window_handles
+        new_win_hn=(list(set(all_win) - set(all_old_win)))
+    print new_win_hn
     WebDriverWait(driver, 10).until(EC.new_window_is_opened(new_win_hn))
-    print driver.current_window_handle
+    #print driver.current_window_handle
     driver.switch_to.window(new_win_hn[0])
-    print driver.current_window_handle
+    #print driver.current_window_handle
     driver.close()
     driver.switch_to.window(mn_win)
-    print driver.current_window_handle
+    #print driver.current_window_handle
 
 
