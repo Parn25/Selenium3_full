@@ -13,24 +13,26 @@ def start(request):
     request.addfinalizer(driver.quit)
     return driver
 def test(start):
-    start = webdriver.Chrome()
+    #Открываем стартовую страницу, авторизируемся
     start.get('http://localhost/litecart/admin/login.php')
     start.find_element_by_xpath('//*[@id="box-login"]/form/div[1]/table/tbody/tr[1]/td[2]/span/input').send_keys('admin')
     start.find_element_by_xpath('//*[@id="box-login"]/form/div[1]/table/tbody/tr[2]/td[2]/span/input').send_keys('admin')
     start.find_element_by_xpath('//*[@id="box-login"]/form/div[2]/button').click()
+    #Открываем меню Countries и первую страну в списке
     start.find_element_by_css_selector('#box-apps-menu li:nth-child(3)').click()
     start.find_element_by_css_selector('table.dataTable tr.row td:nth-child(5) a').click()
-    all_link = start.find_elements_by_css_selector('#content > form a:not([id="address-format-hint"])')
+    all_link = start.find_elements_by_css_selector('#content > form a:not([id="address-format-hint"])')#Находим все ссылки на стрнице в соотвествии с заданием
+    #Итерируемся по ссылкам
     for lk in all_link:
-        mn_win = start.current_window_handle
-        all_old_win = start.window_handles
-        lk.click()
-        all_win = start.window_handles
-        new_win_hn=list(set(all_win) - set(all_old_win))
-        print start.current_window_handle
-        start.switch_to.window(new_win_hn[0])
-        WebDriverWait(start,10).until(EC.visibility_of_element_located((By.CSS_SELECTOR,'body')))
-        print start.current_window_handle
-        start.close()
-        start.switch_to.window(mn_win)
-        print start.current_window_handle
+        mn_win = start.current_window_handle #Запоминаем заголовок текущего окна(стартового)
+        all_old_win = start.window_handles #Сохраняем заголовки  всех открытых окон
+        lk.click()#Кликаем по ссылке
+        #Проверяем открылась ли новое окно
+        new_win_hn = []
+        while (new_win_hn == []):
+            all_win = start.window_handles #Запоминаем загаловки всех открытых окон
+            new_win_hn = (list(set(all_win) - set(all_old_win))) #Находим заголовок открытого окна. Из множества зоголовков открытых окон(после lk.click()) вычетаем множество заголовков ранее открытых окон(до lk.click())
+        start.switch_to.window(new_win_hn[0])#  Переключаемся на новое открытое окно
+        WebDriverWait(start,10).until(EC.visibility_of_element_located((By.CSS_SELECTOR,'body')))#Дожидаемся пока откроется содержимое страницы
+        start.close()#Закрываем новое окно
+        start.switch_to.window(mn_win)# Переключаемся на стартовую страницу
