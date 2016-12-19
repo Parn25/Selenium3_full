@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+#Версия Python 2.7
 import pytest
 from aplication import Aplication
 #Тест добаления трех продуктов и удаления их из корзине
@@ -11,5 +13,5 @@ def test_add_del_product(app):
     app.add_duck("Yellow Duck")#Добавляем продукт
     app.add_duck("Green Duck")
     app.add_duck("Blue Duck")
-    app.d_all_duck()#Elfkztv dct ghjlerns
+    app.d_all_duck()#Удаляем все продукты из корзины
 
