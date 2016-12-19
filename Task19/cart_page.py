@@ -6,12 +6,12 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import Select
-
+#Класс для работы со страницей Корзины покупателя
 class CartPage:
     def __init__(self, driver):
         self.driver = driver
         self.wait = WebDriverWait(driver, 10)
-
+    #Модуль для удаления всех продуктов из корзины
     def dl_dick(self):
         all_product_order = self.driver.find_elements_by_css_selector('li.item')
         ft = [str(li_num) for li_num in range(1, len(all_product_order) + 1)]

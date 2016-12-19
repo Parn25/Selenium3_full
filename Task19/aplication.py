@@ -5,7 +5,7 @@ from product_page import ProductPage
 from selenium import webdriver
 from start_page import StartPage
 
-
+#Класс добавления продукта
 class Aplication:
     def __init__(self):
         self.driver = webdriver.Chrome()
